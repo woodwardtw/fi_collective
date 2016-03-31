@@ -62,7 +62,7 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . $post_categories . '&filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
+					echo '<div class="asset-list"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . $scene . '&cats=' . $post_categories . '&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
 				}
 
 			}
@@ -97,7 +97,7 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list alpha"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . urlencode($post_categories) . ', 13" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
+					echo '<div class="asset-list alpha"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . urlencode($post_categories) . ', 13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) .'" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
 				}
 
 			}
@@ -132,7 +132,7 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list audio"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . $post_categories . ',13" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>' ;
+					echo '<div class="asset-list audio"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form-audio/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . $post_categories . ',13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>' ;
 				}
 
 			}
