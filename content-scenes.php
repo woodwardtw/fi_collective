@@ -24,8 +24,44 @@
 	<div class="col-md-6">
 	<?php echo the_post_thumbnail('scene-thumb' , array( 'class' => 'alignleft img-fluid' ));?>
 		<div class="tips">
-		<h2>Tips</h2>
-			<img src="https://c2.staticflickr.com/2/1605/24459888894_7a35bf01a1.jpg" class="responsive">
+		<h2>&nbsp;</h2>
+
+						<div class="row" id="profile-grid">
+				
+					<div class="col-xs-12 profile">
+				        <div class="panel panel-default">
+				          <div class="panel-thumbnail">
+				          	<a href="#" title="image tips" class="thumb">
+				          		<img src="http://rampages.us/fivideocollective/wp-content/uploads/sites/14241/2016/03/formattingtable.png" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+				          	</a>
+				          </div>
+				          <div class="panel-body">
+				            <p class="profile-name">Image Tips</p>
+				            <p>click on the image to see the larger version</p>
+				          </div>
+				        </div>
+				    </div>
+				    </div>
+			<!--<img src="https://c2.staticflickr.com/2/1605/24459888894_7a35bf01a1.jpg" class="responsive">-->
+
+												<!-- .modal-profile -->
+									<div class="modal fade modal-profile" tabindex="-1" role="dialog" aria-labelledby="modalProfile" aria-hidden="true">
+											<div class="modal-dialog modal-lg">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button class="close" type="button" data-dismiss="modal">×</button>
+														<h3 class="modal-title"></h3>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button class="btn btn-default" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+								        
+											</div>
+										</div>
+									<!-- //.modal-profile -->
 		</div>
 	</div>
 	<div class="col-md-6 needs well well-lg">
@@ -62,12 +98,12 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . $scene . '&cats=' . $post_categories . '&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
+					echo '<div class="asset-list"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . $scene . '&cats=' . $post_categories . '&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'?tag=submission" class="clickit">View</a></div></div>'  ;
 				}
 
 			}
 			else {
-				echo 'No images need. Thanks.';
+				echo 'No images needed. Thanks.';
 			}
 
 			?>
@@ -97,7 +133,7 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list alpha"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . urlencode($post_categories) . ', 13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) .'" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>'  ;
+					echo '<div class="asset-list alpha"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . urlencode($post_categories) . ', 13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) .'" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'?tag=submission" class="clickit">View</a></div></div>'  ;
 				}
 
 			}
@@ -105,7 +141,6 @@
 			}
 
 			?>
-			<h3>audio</h3>
 			<?php
 			$mediatype = 'audio';
 			$posts = get_posts(array(
@@ -117,6 +152,8 @@
 
 			if($posts)
 			{
+						echo	'<h3>audio</h3>';
+
 
 				foreach($posts as $post)
 				{
@@ -132,7 +169,7 @@
 					$post_categories = 'Not Assigned';
 					};
  
-					echo '<div class="asset-list audio"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form-audio/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . $post_categories . ',13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'" class="clickit">View</a></div></div>' ;
+					echo '<div class="asset-list audio"><div class="asset-name">' . get_the_title($post->ID) . '</div><div class="asset-links"><a href="' . get_site_url() . '/form-audio/?title=' . urlencode(get_the_title($post->ID)) . '&cats=' . $post_categories . ',13&fi_filename=' . $scene . '-' .  urlencode(get_the_title($post->ID)) . '" class="clickit"> Submit</a> <a href="' . get_site_url() . '/category/'. $scene .'+'. $mediatype .'?tag=submission" class="clickit">View</a></div></div>' ;
 				}
 
 			}
@@ -174,9 +211,15 @@
 			else {
 			}
 
-			?>-->
-
+			?>-->			
 	
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+		<h2>The Script</h2> 
+			<a href="https://docs.google.com/document/d/1U-0Z7e2n41pK1dBHjOpr3h40abg7TGu0XIgBTDzWVy4/edit" class="btn btn-default">Read the entire script</a>
+			<?php the_content();?>
+		</div>
 	</div>
 
 	<footer class="entry-meta">
