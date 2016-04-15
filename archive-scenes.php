@@ -60,7 +60,7 @@ get_header(); ?>
 							_e( 'Links', 'fi_collective' );
 
 						else :
-							_e( 'Archives', 'fi_collective' );
+							_e( 'Scenes', 'fi_collective' );
 
 						endif;
 					?>
